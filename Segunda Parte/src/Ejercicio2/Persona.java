@@ -21,9 +21,9 @@
  * @version 1.0
  */
 
-package Ejercicio1;
+package Ejercicio2;
 
-public class Persona implements Precedable<Persona>{
+public class Persona implements Comparable<Persona> {
     private String nombre;
     private int dni;
 
@@ -51,7 +51,7 @@ public class Persona implements Precedable<Persona>{
     }
 
     @Override
-    public int precedeA(Persona t) {
+    public int compareTo(Persona t) {
         return this.dni - t.getDni();
     }
 
